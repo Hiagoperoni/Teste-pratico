@@ -29,7 +29,7 @@ export default function Home() {
             )) : (<p>Pesquise pelo nome do Herói ou clique em Pesquisar Todos para verificar todos os Heróis do Catálogo</p>)
           }
         </section>
-        <Pagination currentPage={1}/>
+        <Pagination />
       </section>
       <Footer />
     </main>
