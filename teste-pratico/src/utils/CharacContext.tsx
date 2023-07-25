@@ -13,21 +13,29 @@ export interface Character {
 export interface CharacterContextType {
   characters: Character[];
   setCharacters: Dispatch<SetStateAction<Character[]>>;
+  currentPage: number;
+  totalPages: number;
+  setCurrentPage: Dispatch<SetStateAction<number>>;
 }
 
-const CharacContext = createContext<CharacterContextType>({
+const useCharacContext = createContext<CharacterContextType>({
   characters: [],
-  setCharacters: () => {}
+  setCharacters: () => {},
+  currentPage: 1,
+  totalPages: 157,
+  setCurrentPage: () => {},
 });
 
 const CharacterProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [characters, setCharacters] = useState<Character[]>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const totalPages = 157;
 
   return (
-    <CharacContext.Provider value={{ characters, setCharacters }}>
+    <useCharacContext.Provider value={{ characters, setCharacters, currentPage, totalPages, setCurrentPage }}>
       {children}
-    </CharacContext.Provider>
+    </useCharacContext.Provider>
   );
 };
 
-export { CharacContext, CharacterProvider };
+export { useCharacContext, CharacterProvider };

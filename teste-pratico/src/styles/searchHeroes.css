@@ -14,10 +14,10 @@ main {
   font-family: 'Marvel', sans-serif;
   font-weight: 700;
   font-size: 2em;
-  margin-top: 10%;
+  margin-top: 8%;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px gray;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
 }
 
 .searchTitleContent {
@@ -27,11 +27,16 @@ main {
   border-radius: 5px 5px 0px 0px;
 }
 
-.searchResult {
+.searchResults {
   padding-top: 2%;
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 18% 18% 18% 18% 18%;
   grid-gap: 20px;
   justify-content: center;
   padding-bottom: 2%;
+}
+
+.searchOneResult {
+  display: flex;
+  justify-content: center;
 }

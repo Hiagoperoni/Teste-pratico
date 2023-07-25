@@ -11,13 +11,13 @@ export default function HeroCard(props: Character) {
       <div className="heroTitle">
         <h1>{name}</h1>
       </div>
-      <Image
-        src={`${thumbnail.path}.${thumbnail.extension}`}
-        alt={`Foto ${name}`}
-        className="fotoHero"
-        width={200}
-        height={150}
-      />
+        <Image
+          src={`${thumbnail.path}.${thumbnail.extension}`}
+          alt={`Foto ${name}`}
+          className="fotoHero"
+          width={200}
+          height={150}
+        />
     </article>
   );
 }

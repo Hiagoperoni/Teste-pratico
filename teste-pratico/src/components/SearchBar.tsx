@@ -1,11 +1,11 @@
 "use client";
 import "@/styles/searchBar.css";
 import React, { ChangeEvent, useContext, useState } from 'react';
-import { CharacContext, Character } from '@/utils/CharacContext';
+import { useCharacContext, Character } from '@/utils/CharacContext';
 import { getCharacters, getCharacterByName } from "@/api/routes";
 
 export default function SearchBar() {
-  const { setCharacters } = useContext(CharacContext);
+  const { setCharacters, currentPage } = useContext(useCharacContext);
   const [nameToSearch, setNameToSearch] = useState<string>('');
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +22,7 @@ export default function SearchBar() {
   };
 
   const handleSearchAll = async () => {
-    const allCharacs = await getCharacters();
+    const allCharacs = await getCharacters(currentPage);
     setCharacters(allCharacs);
   };
 

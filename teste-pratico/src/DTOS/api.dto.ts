@@ -12,3 +12,7 @@ export interface ApiResponse {
     results: Character[];
   };
 }
+
+export interface Pagination {
+  currentPage: number;
+}

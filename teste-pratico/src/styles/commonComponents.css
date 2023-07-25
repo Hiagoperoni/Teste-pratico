@@ -47,4 +47,10 @@ footer {
   display: flex;
   justify-content: center;
   margin-bottom: 8%;
+  color: white;
+  font-size: 0.7em;
+}
+
+.fotoHero {
+  border-radius: 5px;
 }
