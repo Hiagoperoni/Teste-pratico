@@ -17,6 +17,7 @@ main {
   margin-top: 10%;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px gray;
+  margin-bottom: 10%;
 }
 
 .searchTitleContent {
@@ -24,4 +25,13 @@ main {
   color: white;
   padding: 0% 0% 2% 2%;
   border-radius: 5px 5px 0px 0px;
+}
+
+.searchResult {
+  padding-top: 2%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 20px;
+  justify-content: center;
+  padding-bottom: 2%;
 }

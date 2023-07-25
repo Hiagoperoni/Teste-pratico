@@ -28,3 +28,23 @@ footer {
   font-family: 'Marvel', sans-serif;
   font-size: 1.2em;
 }
+
+.heroCard {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px gray;
+}
+
+.heroTitle {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8%;
+}

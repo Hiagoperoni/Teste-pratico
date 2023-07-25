@@ -34,7 +34,7 @@ export default function SearchBar() {
         className="searchBarButton"
         onClick={handleSearchByName}
       >
-        Pesquisar
+        Pesquisar Herói
       </button>
       <button 
         type="button" 

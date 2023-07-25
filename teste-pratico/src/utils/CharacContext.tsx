@@ -1,8 +1,13 @@
+'use client'
 import React, { createContext, useState, Dispatch, SetStateAction, ReactNode } from 'react';
 
 export interface Character {
   id: number;
   name: string;
+  thumbnail: {
+    path: string;
+    extension: string;
+  }
 }
 
 export interface CharacterContextType {
