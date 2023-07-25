@@ -3,7 +3,7 @@ import { Pagination } from '@/DTOS/api.dto';
 import { useCharacContext } from '@/utils/CharacContext';
 import { useContext } from 'react';
 
-export default function Pagination(props: Pagination) {
+export default function Pagination() {
   const { currentPage, totalPages, setCurrentPage } = useContext(useCharacContext);
   return (
     <section>
