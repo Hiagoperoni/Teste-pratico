@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/searchBar.css";
+import styles from "@/styles/searchBar.module.scss";
 import React, { ChangeEvent, useContext, useState } from 'react';
 import { useCharacContext, Character } from '@/utils/CharacContext';
 import { getCharacters, getCharacterByName } from "@/api/routes";
@@ -22,23 +22,25 @@ export default function SearchBar() {
   };
 
   const handleSearchAll = async () => {
+    console.log(currentPage);
+    
     const allCharacs = await getCharacters(currentPage);
     setCharacters(allCharacs);
   };
 
   return (
     <section>
-      <input type="text" placeholder="Digite o nome do Herói" id="searchBar" onChange={handleInputChange}/>
+      <input type="text" placeholder="Digite o nome do Herói" className={styles.searchBar} onChange={handleInputChange}/>
       <button
         type="button"
-        className="searchBarButton"
+        className={styles.searchBarButton}
         onClick={handleSearchByName}
       >
         Pesquisar Herói
       </button>
       <button 
         type="button" 
-        className="searchBarButton" 
+        className={styles.searchBarButton} 
         onClick={handleSearchAll}
       >
         Pesquisar Todos

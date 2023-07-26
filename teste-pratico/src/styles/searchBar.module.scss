@@ -1,6 +1,10 @@
+// Arquivo searchBar.module.scss
+
 @import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap');
 
-#searchBar {
+$primaryColor: red;
+
+.searchBar {
   width: 30%;
   height: 10%;
   font-size: 0.8em;

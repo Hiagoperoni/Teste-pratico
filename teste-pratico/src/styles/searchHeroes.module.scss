@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap');
 
-main {
+$primaryColor: red;
+
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .searchContainer {
   display: flex;
   flex-direction: column;
@@ -17,14 +20,20 @@ main {
   margin-top: 8%;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px gray;
-  margin-bottom: 8%;
-}
+  margin-bottom: 10%;
 
-.searchTitleContent {
-  background-color: red;
-  color: white;
-  padding: 0% 0% 2% 2%;
-  border-radius: 5px 5px 0px 0px;
+  &TitleContent {
+    background-color: $primaryColor;
+    color: white;
+    padding: 0% 0% 2% 2%;
+    border-radius: 5px 5px 0px 0px;
+    width: 98%;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5em;
+    margin-top: 5%;
+  }
 }
 
 .searchResults {
@@ -34,6 +43,12 @@ main {
   grid-gap: 20px;
   justify-content: center;
   padding-bottom: 2%;
+  width: 98%;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 48% 48%; 
+    grid-gap: 10px;
+  }
 }
 
 .searchOneResult {

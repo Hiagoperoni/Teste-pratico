@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&display=swap');
 
-header {
+$primaryColor: red;
+
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,14 +11,14 @@ header {
   display: flex;
   justify-content: center;
   padding: 1% 0%;
+
+  .marvelLogo {
+    width: 10%;
+    height: 10%;
+  }
 }
 
-header .marvelLogo {
-  width: 10%;
-  height: 10%;
-}
-
-footer {
+.footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -32,7 +34,7 @@ footer {
 .heroCard {
   width: 100%;
   aspect-ratio: 4 / 3;
-  border: 2px solid red;
+  border: 2px solid $primaryColor;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +44,7 @@ footer {
 }
 
 .heroTitle {
-  background-color: red;
+  background-color: $primaryColor;
   width: 100%;
   display: flex;
   justify-content: center;
