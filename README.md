@@ -10,3 +10,4 @@ Para executar o programa, basta fazer o clone do repositório em sua máquina us
 git clone "link do clone"
 
 Ao clonar, abra o arquivo no terminal e execute o comando "npm install" ou "yarn"
+Para executar o projeto, vá na pasta raiz e execute o comando "npm run dev"
